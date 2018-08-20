@@ -1,0 +1,7 @@
+# Untracked files:
+exercises
+node_modules
+dist
+package-lock.json
+*.zip
+src/*.ico
