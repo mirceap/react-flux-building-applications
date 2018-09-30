@@ -4,7 +4,7 @@ var React = require('react');
 
 var About = React.createClass({
 	statics: {
-		willTransitionTo: function(transition, params, query, callback) {
+		/*willTransitionTo: function(transition, params, query, callback) {
 			// E.g.: if !logged -> redirect(login)
 			if(!confirm('Are you sure you want to read a ' + 
 				'page that\'s this boring?')) {
@@ -20,7 +20,7 @@ var About = React.createClass({
 				'page that\'s this exciting?')) {
 				transition.about();
 			}
-		}
+		}*/
 	},
 
 	render: function(){
