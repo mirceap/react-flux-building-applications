@@ -1,0 +1,12 @@
+"use strict";
+
+// module for mirroring the key in the value below
+
+// just copies the value in the value from the key
+// so you don't have to type it twice
+
+var keyMirror = require('react/lib/keyMirror');
+
+module.exports = keyMirror({
+	CREATE_AUTHOR: null
+});
