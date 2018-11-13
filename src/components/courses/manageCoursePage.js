@@ -44,22 +44,26 @@ var ManageCoursePage = React.createClass({
 		return this.setState({course: this.state.course});
 	},
 
+	getErrorMessage: function(attribute, length){
+		return attribute + " must be at least " + length + " characters.";
+	},
+
 	courseFormIsValid: function() {
 		var formIsValid = true;
 		this.state.errors = {}; // clear any previous errors,
 
 		if (this.state.course.title.length < 3){
-			this.state.errors.title = "Title must be at least 3 characters.";
+			this.state.errors.title = this.getErrorMessage("Title", "3");
 			formIsValid = false;
 		}
 
 		if (this.state.course.category.length < 3){
-			this.state.errors.category = "Category must be at least 3 characters.";
+			this.state.errors.category = this.getErrorMessage("Category", "3");
 			formIsValid = false;
 		}
 
 		if (this.state.course.length.length < 2){
-			this.state.errors.length = "Length must be at least 2 characters.";
+			this.state.errors.length = this.getErrorMessage("Length", "2");
 			formIsValid = false;
 		}
 
